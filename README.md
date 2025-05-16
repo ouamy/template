@@ -33,7 +33,24 @@ Remove the .git folder to detach the project from the template's Git history:
 rm -rf .git
 ```
 
-Also consider updating README.md file for your new project and create .env file.
+You may also want to:
+
+- Update README.md for your new project
+- Create a new .env file
+
+### 3. Initialize a New Git Repository
+After cleaning, initialize your own Git history:
+
+```bash
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/your_username/your_repo.git
+git push -u origin main
+```
+
+Replace your_username and your_repo with your actual GitHub account and repository name.
 
 ## Run & Configure
 
