@@ -15,3 +15,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+    'role:admin', // require "admin" role
+])->group(function () {
+    Route::get('/admin', function () {
+        return view('admin.dashboard'); // create the admin view
+    })->name('admin.dashboard');
+});
