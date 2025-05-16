@@ -52,9 +52,14 @@ return [
 
     'channels' => [
 
+        'sentry' => [
+            'driver' => 'sentry',
+            'level' => env('LOG_LEVEL', 'error'),
+        ],
+
         'stack' => [
             'driver' => 'stack',
-            'channels' => explode(',', env('LOG_STACK', 'single')),
+            'channels' => ['single', 'sentry'], // sends logs to both file and Sentry
             'ignore_exceptions' => false,
         ],
 
