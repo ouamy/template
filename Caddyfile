@@ -1,0 +1,5 @@
+# Replace localhost with your domain name
+
+localhost {
+    reverse_proxy 127.0.0.1:8000
+}
