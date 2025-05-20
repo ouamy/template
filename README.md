@@ -140,7 +140,7 @@ This template is designed to help you code faster while staying secure. Use it a
 | Threat Category | Mitigation Implemented      |
 |------------------------------------------------|----------------------------------------------------------------------|
 | ✅ 1. Broken Access Control                    | Jetstream roles & teams, Spatie Permissions                         |
-| ✅ 2. Cryptographic Failures                   | Laravel hashing (bcrypt), HTTPS with Caddy                          |
+| ✅ 2. Cryptographic Failures                   | Laravel hashing (argon2id), HTTPS with Caddy                          |
 | ✅ 3. Injection                                | Eloquent ORM, Blade auto-escaping, Mews Purifier                    |
 | ✅ 4. Insecure Design                          | Input validation, Jetstream structure, middleware usage             |
 | ✅ 5. Security Misconfiguration                | Secure Headers, `.env` defaults, Caddy, `composer audit`           |
