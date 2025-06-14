@@ -1,5 +1,13 @@
 # Replace localhost with your domain name
 
-localhost {
-    reverse_proxy 127.0.0.1:8000
+localhost:443 {
+	tls internal
+	reverse_proxy 127.0.0.1:8000
+}
+
+# phpMyAdmin on phpmyadmin.localhost
+phpmyadmin.localhost {
+	root * /usr/share/phpmyadmin
+	php_fastcgi 127.0.0.1:9000
+	file_server browse
 }
