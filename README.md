@@ -58,7 +58,7 @@ Replace your_username and your_repo with your actual GitHub account and reposito
 listen = /run/php/php8.3-fpm.sock
 ```
 
-Temporarily change it to:
+Change it to:
 
 ```bash
 listen = 127.0.0.1:9000
