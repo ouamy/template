@@ -9,8 +9,6 @@ This template offers a minimal yet robust foundation for building Laravel applic
 ## Prerequisites
 Ensure you have the following installed on your system:
 
-- XAMPP
-
 - Composer
 
 - Caddy
