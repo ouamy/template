@@ -52,6 +52,26 @@ git push -u origin main
 
 Replace your_username and your_repo with your actual GitHub account and repository name.
 
+### 4. PHP-FPM and Hosts Configuration
+
+- Open your PHP-FPM pool config file `/etc/php/8.3/fpm/pool.d/www.conf` and find the line:
+
+```bash
+listen = /run/php/php8.3-fpm.sock
+```
+
+Temporarily change it to:
+
+```bash
+listen = 127.0.0.1:9000
+```
+
+- Add the following line to your `/etc/hosts` file to map a local hostname for phpMyAdmin access:
+
+```bash
+127.0.0.1 phpmyadmin.localhost
+```
+
 ## Run & Configure
 
 ```bash
@@ -149,3 +169,4 @@ This template is designed to help you code faster while staying secure. Use it a
 | ✅ 8. Software & Data Integrity Failures       | Laravel Auditing, HTTPS, controlled dependencies                   |
 | ✅ 9. Logging & Monitoring Failures            | Sentry integration (optional or replaceable)                        |
 | ⚠️ 10. SSRF (Server-Side Request Forgery)     | `parse_url()`, manual domain/IP whitelisting recommended           |
+
